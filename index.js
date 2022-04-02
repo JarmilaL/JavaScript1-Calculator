@@ -29,6 +29,9 @@ Pokud to chcete zkusit bez dalsich napoved, nectete dal ;)
 */
 
 const button = document.querySelector('.switcher button');
+const result = document.querySelector('.result');
+const numbers = document.querySelector('.numbers');
+const operators = document.querySelector('.operators');
 
 function changeLightColor() {
     const light = document.querySelector('.light');
