@@ -48,7 +48,13 @@ function renderCalculation(element) {
     }
 }
 
+function catchElement(event) {
+    console.log(event.target.innerText);
+}
+
 renderCalculation(3);
 
 button.addEventListener('click', changeLightColor);
+numbers.addEventListener('click', catchElement);
+operators.addEventListener('click', catchElement);
 
