@@ -23,9 +23,11 @@ a menilo barvu z cervene na zelenou a zpet.
 */
 
 let button = document.querySelector('.switcher button');
-let light = document.querySelector('.light');
-// Kontrola, jestli se mi do promenne ukladaji prvky, ktere tam chci mit.
-// console.log(button); 
-// console.log(light);
+
+function changeLightColor() {
+    let light = document.querySelector('.light');
+
+    light.classList.toggle('green');
+}
 
 
