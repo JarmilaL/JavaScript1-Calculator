@@ -39,5 +39,16 @@ function changeLightColor() {
     light.classList.toggle('green');
 }
 
+function renderCalculation(element) {
+    
+    if (result.textContent === "0") {
+        result.textContent = element;
+    } else {
+        result.textContent += " " + element;
+    }
+}
+
+renderCalculation(3);
+
 button.addEventListener('click', changeLightColor);
 
