@@ -30,4 +30,5 @@ function changeLightColor() {
     light.classList.toggle('green');
 }
 
+button.addEventListener('click', changeLightColor);
 
