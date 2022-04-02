@@ -21,3 +21,11 @@ a menilo barvu z cervene na zelenou a zpet.
       Pokud se ani nevypisuje, je nejaka chyba uz v jejim volani, v eventListeneru nebo je treba
       spatne vybrany html element...
 */
+
+let button = document.querySelector('.switcher button');
+let light = document.querySelector('.light');
+// Kontrola, jestli se mi do promenne ukladaji prvky, ktere tam chci mit.
+// console.log(button); 
+// console.log(light);
+
+
