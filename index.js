@@ -38,9 +38,12 @@ function changeLightColor() {
 }
 
 function renderCalculation(element) {
-    
+        
     if (result.textContent === "0") {
         result.textContent = element;
+    } else if (element === '=') {
+        let elements = extractElements();
+        result.textContent += " " + element + " " + calculate(parseInt(elements[0]), parseInt(elements[2]), elements[1]);
     } else {
         result.textContent += " " + element;
     }
