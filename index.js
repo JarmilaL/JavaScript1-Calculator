@@ -50,6 +50,45 @@ function catchElement(event) {
     renderCalculation(event.target.innerText);
 }
 
+/*  Tady klidne muzete pouzit if - else.
+    Switch je jiny typ podminky. Muzeme ho pouzit v pripade, ze kontrolujeme stav 
+    jedne promenne, ale ocekavame v ni ruzne hodnoty a na zaklade nich provadime 
+    nejake dalsi kroky. Klasicky switch vypada takto: 
+
+        let result;
+
+        switch (operator) {
+            case "+": result = numberA + numberB;
+                break;
+            case "-": result = numberA - numberB;
+                break;
+            case "*": result = numberA * numberB;
+                break;
+            case "/": result = numberA / numberB;
+        }    
+
+        return result;
+
+    Break zajistuje, ze kdyz se najde ten spravny case a vykona se, tak program vyskoci ze switche
+    a dalsi casy uz neprochazi. 
+    Ja jsem niz pouzila takovou zkratku. Jelikoz chci, aby moje funkce vracela vysledek spravne
+    matematicke operace, dala jsem do case rovnou return. Tim padem nepotrebuji brake. Programek 
+    po vykonani vypoctu nevyskoci jen ze switche, ale uplne ven z funkce. Pozor na to! Kdybych mela
+    za switchem jeste nejakou logiku, nikdy by se k ni nedoslo! 
+*/ 
+function calculate(numberA, numberB, operator) {
+
+    switch (operator) {
+        case "+": return numberA + numberB;
+        case "-": return numberA - numberB;
+        case "*": return numberA * numberB;
+        case "/": return numberA / numberB;
+    }       
+}
+
+// Test, jestli funkce funguje
+console.log(calculate(2, 5, '+'));
+
 button.addEventListener('click', changeLightColor);
 numbers.addEventListener('click', catchElement);
 operators.addEventListener('click', catchElement);
