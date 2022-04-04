@@ -86,8 +86,13 @@ function calculate(numberA, numberB, operator) {
     }       
 }
 
-// Test, jestli funkce funguje
-console.log(calculate(2, 5, '+'));
+function extractElements() {
+    const calculationElements = result.textContent.split(' ');
+    return calculationElements;
+
+    // Slo by samozrejme napsat na jeden radek:
+    // return result.textContent.split(' ');
+}
 
 button.addEventListener('click', changeLightColor);
 numbers.addEventListener('click', catchElement);
